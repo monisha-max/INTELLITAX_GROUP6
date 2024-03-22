@@ -61,8 +61,8 @@ git clone https://github.com/monisha-max/INTELLITAX_GROUP6
 ```
 <br>
 connect to your mongodb url to set up the databases<br>
-open db>db.js:<br>
-remove the existing url and setup ur mongodb url<br>
+open .auth>MONGO_URI
+remove the existing url and setup your MONGO_URI<br>
 
 ### Steps to create a mongodb url:
 <br>
