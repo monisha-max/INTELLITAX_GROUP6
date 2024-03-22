@@ -39,20 +39,19 @@ Introducing IntelliTax, your all-in-one solution for tax management and financia
 <br>
 
 ## Work flow
+![img1](https://github.com/monisha-max/group6_Intellitax/assets/124153277/74fec379-cad9-40d5-a3df-c0823424377d)
+![img2](https://github.com/monisha-max/group6_Intellitax/assets/124153277/4aae02c5-bf43-4402-a746-96473e08cc57)
+![login](https://github.com/monisha-max/group6_Intellitax/assets/124153277/59bfa230-d3d7-4c85-a822-c017f6010836)
+![taxyear](https://github.com/monisha-max/group6_Intellitax/assets/124153277/36d67c1b-bc82-4594-924c-04f8a97b74ad)![form](https://github.com/monisha-max/group6_Intellitax/assets/124153277/e55584fb-6265-46e6-9694-7ee80b3d98d6)
+![analytics](https://github.com/monisha-max/group6_Intellitax/assets/124153277/40168302-abf5-4eec-9c83-ec39be23f27d)
+![charts2](https://github.com/monisha-max/group6_Intellitax/assets/124153277/cbc38152-36e5-45e9-aebe-232ebc6df817)
+![WhatsApp Image 2024-03-22 at 2 07 17 PM](https://github.com/monisha-max/group6_Intellitax/assets/124153277/18a2be9f-9258-4f67-a4f3-71cc5d337bc6)
+![deadline](https://github.com/monisha-max/group6_Intellitax/assets/124153277/bfe25675-26cf-4ddd-9182-f1919e890785)![suggestions](https://github.com/monisha-max/group6_Intellitax/assets/124153277/36314fef-935a-40c3-ac95-4c78197292d3)
+![WhatsApp Image 2024-03-22 at 5 31 05 PM (1)](https://github.com/monisha-max/group6_Intellitax/assets/124153277/9b74be68-a20b-4d81-987b-47b4ce2158f3)
+![WhatsApp Image 2024-03-22 at 5 31 05 PM](https://github.com/monisha-max/group6_Intellitax/assets/124153277/f77d9604-0001-4ee9-b2fb-e8e40f7b102c)
+![ratings](https://github.com/monisha-max/group6_Intellitax/assets/124153277/ecb58726-5d68-4a5a-92e9-73adcda5f374)
 
-<img src="../DESISASCEND/IntelliTax-Photos/img1.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img2.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img3.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img4.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img5.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img6.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img7.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img8.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img9.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img10.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img11.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img12.jpg" >
-<img src="img13.jpg" >
+
 <br>
 
 # Installation
