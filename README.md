@@ -107,7 +107,7 @@ That's it! You've successfully created a database on MongoDB Atlas and connected
 
 # Running the application
 
-### Open 2 terminals in your code editor
+### Open 3 terminals in your code editor
 
 Terminal 1: Setting up main functionalities - Before running the below mentioned commands on terminal-1, install nodejs from official website of nodejs.
 
