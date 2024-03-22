@@ -2,3 +2,6 @@ OPENAI_API_KEY=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
 EMAIL_USER=intellitax9@gmail.com
 EMAIL_PASS=odiiqzrcgwptrjod
 MONGO_URI=mongodb+srv://monishakollipara13:lQCoLu5hP6mIuaoj@cluster0.viy9cup.mongodb.net/TaxCollector?retryWrites=true&w=majority&appName=Cluster0
+
+#this stores all the project related auths, openapi key:this is for the openai services, EMAIL_USER: Email address used for sending emails to all the users on the db, EMAIL_PASS:Password for the email account
+#MONGO_URI: Connection URI for MongoDB. This includes the username, password, and database details.
