@@ -2,34 +2,38 @@
     INTELLITAX
 </h1>
 
-<h3 align="center">
-Streamline school management, class organization, and add students and faculty.<br>
-Seamlessly track attendance, assess performance, and provide feedback. <br>
-Access records, view marks, and communicate effortlessly.
-</h3>
-
 <br>
 
 # About
+Introducing IntelliTax, your all-in-one solution for tax management and financial planning. With advanced calculation capabilities, personalized tax-saving suggestions, timely reminders, and a responsive chatbot for expert guidance, IntelliTax streamlines the tax process. Plus, visualize your finances effortlessly with intuitive charts. Say goodbye to tax-related stress and hello to seamless financial management with IntelliTax.
 
 ## Features
 
-- **User Roles:** The system supports three user roles: Admin, Teacher, and Student. Each role has specific functionalities and access levels.
+- **User Role:**  IntelliTax is designed for taxpayers, providing them with comprehensive tools and resources to facilitate seamless tax filing.
 
-- **Admin Dashboard:** Administrators can add new students and teachers, create classes and subjects, manage user accounts, and oversee system settings.
+- **Admin Dashboard:**  Administrators oversee system operations and configurations, ensuring smooth functioning of IntelliTax.
 
-- **Attendance Tracking:** Teachers can easily take attendance for their classes, mark students as present or absent, and generate attendance reports.
+- **Tax Calculations:**  Taxpayers input financial data, and IntelliTax automatically performs accurate tax calculations, offering detailed breakdowns and summaries.
 
-- **Performance Assessment:** Teachers can assess students' performance by providing marks and feedback. Students can view their marks and track their progress over time.
+- **Personalized Tax Suggestions:** IntelliTax offers tailored suggestions to optimize tax liabilities based on user data and financial profiles.
 
-- **Data Visualization:** Students can visualize their performance data through interactive charts and tables, helping them understand their academic performance at a glance.
+- **Interactive Chatbots:**  IntelliTax features two chatbots: Resource-based Chatbot for querying tax-related resources and Personalized Tax Chatbot for addressing tax-filing inquiries, providing personalized assistance to taxpayers.
 
-- **Communication:** Users can communicate effortlessly through the system. Teachers can send messages to students and vice versa, promoting effective communication and collaboration.
+- **Yearly Tax Details:** IntelliTax provides taxpayers with detailed records of their tax filings for each year, allowing them to access and review their financial information conveniently.
+
+- **Graphical Representation:** IntelliTax enhances user experience by offering graphical representations of tax data over multiple years. Users can visualize their tax trends and patterns more effectively through interactive graphs, aiding in better understanding and analysis of their financial situation over time.
+
+- **Deadline Reminders:**  Users receive timely notifications about upcoming tax deadlines, ensuring timely submission and penalty avoidance.
+
+- **Data Security:**  IntelliTax prioritizes data security, employing robust encryption protocols to safeguard sensitive financial information.
+
+
+- **Educational Resources:**  Users have access to a wealth of educational materials, including articles and guides, to enhance their understanding of tax laws and regulations.
 
 ## Technologies Used
 
-- Frontend: React.js, Material UI, Redux
-- Backend: Node.js, Express.js
+- Frontend: HTML, CSS, Javascript, Handlebars
+- Backend: Node.js, Express.js, Chart.js, langchain, OpenAi-api, os library, Streamlit, dotenv
 - Database: MongoDB
 
 <br>
@@ -48,7 +52,7 @@ Access records, view marks, and communicate effortlessly.
 <img src="../DESISASCEND/IntelliTax-Photos/img10.jpg" >
 <img src="../DESISASCEND/IntelliTax-Photos/img11.jpg" >
 <img src="../DESISASCEND/IntelliTax-Photos/img12.jpg" >
-<img src="../DESISASCEND/IntelliTax-Photos/img13.jpg" >
+<img src="img13.jpg" >
 <br>
 
 # Installation
@@ -67,13 +71,6 @@ npm install
 npm start
 ```
 
-Create a file called .env in the backend folder.
-Inside it write this :
-
-MONGO_URL = mongodb://127.0.0.1/school
-
-Instead of this link write your database link.
-
 Terminal 2: Setting Up Frontend
 
 ```sh
@@ -85,20 +82,4 @@ npm start
 Now, navigate to `localhost:3000` in your browser.
 The Backend API will be running at `localhost:5000`.
 
-If this is not working then go to the src > redux > userRelated > userHandle.js
-
-Write this after the import statements :
-
-const REACT_APP_BASE_URL = "http://localhost:5000"
-
-Now replace all process.env.REACT_APP_BASE_URL with REACT_APP_BASE_URL.
-
-The problem here was that the .env file in the frontend was not working for other users while it works for me.
-So you have to do this in the frontend. After this the project will run smoothly if not then you can contact me.
-
 <br>
-
-# Deployment
-
-- Render - server side
-- Netlify - client side
