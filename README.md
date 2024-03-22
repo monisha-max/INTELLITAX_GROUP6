@@ -122,6 +122,13 @@ cd frontend
 npm install
 npm start
 ```
+Terminal 1: Setting Up Backend
+
+```sh
+cd backend
+npm install
+npm start
+```
 
 Now, navigate to `localhost:3000` in your browser.
 The Backend API will be running at `localhost:5000`.
