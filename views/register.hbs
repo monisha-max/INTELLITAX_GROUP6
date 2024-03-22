@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Character encoding and title of the web page -->
+  <meta charset="UTF-8">
+  <title>IntelliTax</title>
+  <!-- Link to an external CSS stylesheet for styling the page -->
+  <link rel="stylesheet" href="css/register.css">
+  <!-- Meta tag for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!-- Main container for the registration form -->
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <!-- Form for user registration, posts data to the '/register' route -->
+      <form action="/register" method="post">
+        <div class="user-details">
+           <!-- Input box for full name -->
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="name" placeholder="Enter your name" required>
+          </div>
+          <!-- Input box for Username -->
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="username" placeholder="Enter your username" required>
+          </div>
+          <!-- Input box for Email -->
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <!-- Input box for Phone Number-->
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phone" placeholder="Enter your number" required>
+          </div>
+          <!-- Input box for Password -->
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="password" placeholder="Enter your password" required>
+          </div>
+          <!-- Confirm Password -->
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="confirmPassword" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="button">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

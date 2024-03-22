@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Character encoding and viewport settings for responsiveness -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the web page -->
+  <title>IntelliTax</title>
+  <!-- Link to an external CSS stylesheet for styling the page -->
+  <link rel="stylesheet" href="css/year.css">  
+</head>
+<body>
+    <div class="outer">
+        <!-- Container for the text and form elements -->
+        <div class="carousel-text">
+            <!-- Wrapper for styling and alignment -->
+            <div class="wrapper">
+                <!-- Form for submitting the tax year -->
+                <form action="/select-tax-year" method="post">
+                    <h2>Select Tax Year</h2>
+                    <input type="number" name="year" id="year" required>
+                     <!-- Submit button for the form -->
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

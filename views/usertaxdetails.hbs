@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for responsive design, character encoding, and IE compatibility -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliTax</title>
+
+    <!-- External CSS and icon fonts -->
+    <link rel="stylesheet" href="css/use_details_style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-wgFIF5f4mF+DTT5zx2mYvEMI4oaw29TvYM+kpnCPXNLtJKx81uk8bJUxGNfkUzTSDsHtX9WlQhpxp2T1Ov0c9w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    ,
+    <script>
+        function showInfo(field) {
+            let info = '';
+            // Provide information based on the field clicked
+            switch (field) {
+                case 'grossSalary':
+                    info = 'Gross Salary is your total income before deductions.';
+                    break;
+                case 'baseSalary':
+                    info = 'Base Salary is the primary component of your salary, excluding bonuses, allowances, or other benefits.';
+                    break;
+                case 'hraReceived':
+                    info = 'HRA (House Rent Allowance) is an allowance for expenses related to rented accommodation.';
+                    break;
+                case 'rentPaid':
+                    info = 'Rent Paid refers to the amount you pay as rent for your housing.';
+                    break;
+                case 'dearAllowance':
+                    info = 'Dearness Allowance is paid to employees to offset the impact of inflation.';
+                    break;
+                case 'ltaReceived':
+                    info = 'LTA (Leave Travel Allowance) is an allowance for travel expenses while on leave from work.';
+                    break;
+                case 'investment80c':
+                    info = 'Investment under Section 80C includes various investments and expenses that are eligible for tax deductions.';
+                    break;
+                case 'section80TTA':
+                    info = 'Section 80TTA provides a deduction on interest income from savings accounts in banks and post offices.';
+                    break;
+                case 'section80D':
+                    info = 'Section 80D offers tax deductions for premiums paid on health insurance policies.';
+                    break;
+                case 'section80G':
+                    info = 'Section 80G provides tax benefits for donations to charitable organizations.';
+                    break;
+                case 'section24':
+                    info = 'Section 24 relates to tax benefits on home loan interest repayments.';
+                    break;
+                case 'section80CCD1B':
+                    info = 'Section 80CCD(1B) pertains to deductions for contributions to the National Pension Scheme (NPS).';
+                    break;
+                case 'section80CCD2':
+                    info = 'Section 80CCD(2) relates to the employer’s contribution to an employee’s pension account.';
+                    break;
+                case 'section80E':
+                    info = 'Section 80E provides tax benefits for interest paid on loans taken for higher education.';
+                    break;
+            }
+            alert(info);
+        }
+        
+    </script>
+</head>
+
+<body>
+    <!-- Main container for the application -->
+    <div class="container">
+         <!-- Header for the form -->
+        <header>Tax Details</header>
+
+        <!-- Form for entering tax details -->
+        <form action="{{#if update}}/calculate-tax{{else}}/calculate-tax{{/if}}" method="post">
+            <div class="form first">
+                <!-- User input fields for various tax-related details -->
+                <div class="details ID">
+
+                    <div class="fields">
+                         <!-- Input field for Gross Salary with an information button -->
+                        <div class="input-field">
+                            <label>Gross Salary
+                                <button type="button" class="info-btn" onclick="showInfo('grossSalary')">i</button><br>
+                            </label>
+                            <input type="number" name="grossSalary" placeholder="Enter Gross Salary" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.grossSalary}}{{/if}}">
+                        </div>
+                        <!-- Input field for Base Salary with an information button -->
+                        <div class="input-field">
+                            <label>Base Salary
+                                <button type="button" class="info-btn" onclick="showInfo('baseSalary')">i</button><br>
+                            </label>
+                            <input type="number" name="baseSalary" placeholder="Enter Base Salary" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.baseSalary}}{{/if}}">
+                        </div>
+                        <!-- Input field for HRA received with an information button -->
+                        <div class="input-field">
+                            <label>HRA received
+                                <button type="button" class="info-btn" onclick="showInfo('hraReceived')">i</button><br>
+                            </label>
+                            <input type="number" name="hraReceived" placeholder="Enter HRA received" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.hraReceived}}{{/if}}">
+                        </div>
+                        <!-- Input field for Rent Paid with an information button -->
+                        <div class="input-field">
+                            <label>Rent Paid
+                                <button type="button" class="info-btn" onclick="showInfo('rentPaid')">i</button><br>
+                            </label>
+                            <input type="number" name="rentPaid" placeholder="Enter Rent Paid" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.rentPaid}}{{/if}}">
+                        </div>
+                        <!-- Input field for Dear Allowance with an information button -->
+                        <div class="input-field">
+                            <label>Dear Allowance
+                                <button type="button" class="info-btn"
+                                    onclick="showInfo('dearAllowance')">i</button><br>
+                            </label>
+                            <input type="number" name="dearAllowance" placeholder="Enter Dear Allowance" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.dearAllowance}}{{/if}}">
+
+                        </div>
+                         <!-- Input field for LTA received with an information button -->
+                        <div class="input-field">
+                            <label>LTA received
+                                <button type="button" class="info-btn" onclick="showInfo('ltaReceived')">i</button><br>
+                            </label>
+                            <input type="number" name="ltaReceived" placeholder="Enter LTA received" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.ltaReceived}}{{/if}}">
+
+                        </div>
+                         <!-- Input field for Investment under Sec 80C, 80CCC, 80CCD(1) with an information button -->
+                        <div class="input-field">
+                            <label>Investment under Sec 80C, 80CCC, 80CCD(1)
+                                <button type="button" class="info-btn"
+                                    onclick="showInfo('investment80c')">i</button><br>
+                            </label>
+                            <input type="number" name="investment80c" placeholder="Enter Investment" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.investment80c}}{{/if}}">
+
+                        </div>
+                        <!-- Input field for Amt under Sec 80TTA with an information button -->
+                        <div class="input-field">
+                            <label>Amt under Sec 80TTA
+                                <button type="button" class="info-btn" onclick="showInfo('section80TTA')">i</button><br>
+                            </label>
+                            <input type="number" name="section80TTA" placeholder="Enter Amt under Sec 80TTA" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.section80TTA}}{{/if}}">
+
+                        </div>
+                        <!-- Input field for Amt under Sec 80D with an information button -->
+                        <div class="input-field">
+                            <label>Amt under Sec 80D
+                                <button type="button" class="info-btn" onclick="showInfo('section80D')">i</button><br>
+                            </label>
+                            <input type="number" name="section80D" placeholder="Enter Amt under Sec 80D" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.section80D}}{{/if}}">
+
+                        </div>
+                        <!-- Input field for Amt under Sec 80G with an information button -->
+                        <div class="input-field">
+                            <label>Amt under Sec 80G
+                                <button type="button" class="info-btn" onclick="showInfo('section80G')">i</button><br>
+                            </label>
+                            <input type="number" name="section80G" placeholder="Enter Amt under Sec 80G" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.section80G}}{{/if}}">
+
+                        </div>
+                        <!-- Input field for Amt under Sec 24 with an information button -->
+                        <div class="input-field">
+                            <label>Amt under Sec 24
+                                <button type="button" class="info-btn" onclick="showInfo('section24')">i</button><br>
+                            </label>
+                            <input type="number" name="section24" placeholder="Enter Amt under Sec 24" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.section24}}{{/if}}">
+
+                        </div>
+                        <!-- Input field forAmt under Sec 80CCD(1B) with an information button -->
+                        <div class="input-field">
+                            <label>Amt under Sec 80CCD(1B)
+                                <button type="button" class="info-btn"
+                                    onclick="showInfo('section80CCD1B')">i</button><br>
+                            </label>
+                            <input type="number" name="section80CCD1B" placeholder="Enter Amt under Sec 80CCD(1B)"
+                                required value="{{#if previousTaxDetails}}{{previousTaxDetails.section80CCD1B}}{{/if}}">
+
+                        </div>
+                        <!-- Input field for Amt under Sec 80CCD(2) with an information button -->
+                        <div class="input-field">
+                            <label>Amt under Sec 80CCD(2)
+                                <button type="button" class="info-btn"
+                                    onclick="showInfo('section80CCD2')">i</button><br>
+                            </label>
+                            <input type="number" name="section80CCD2" placeholder="Enter Amt under Sec 80CCD(2)"
+                                required value="{{#if previousTaxDetails}}{{previousTaxDetails.section80CCD2}}{{/if}}">
+
+                        </div>
+                        <!-- Input field for Amt under Sec 80E with an information button -->
+                        <div class="input-field">
+                            <label>Amt under Sec 80E
+                                <button type="button" class="info-btn" onclick="showInfo('section80E')">i</button><br>
+                            </label>
+                            <input type="number" name="section80E" placeholder="Enter Amt under Sec 80E" required
+                                value="{{#if previousTaxDetails}}{{previousTaxDetails.section80E}}{{/if}}">
+
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <button type="submit">{{#if update}}Update{{else}}Submit{{/if}}</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="previous-data">
+            {{#each allTaxDetails}}
+                <div class="readonly-details">
+                    <p><strong>Tax Details for Year {{year}}</strong></p>
+                    <p>Gross Salary: {{grossSalary}}</p>
+                    <p>Base Salary: {{baseSalary}}</p>
+                    <p>HRA received: {{hraReceived}}</p>
+                    <p>Rent Paid: {{rentPaid}}</p>
+                    <p>Dear Allowance: {{dearAllowance}}</p>
+                    <p>LTA received: {{ltaReceived}}</p>
+                    <p>Investment under Sec 80C, 80CCC, 80CCD(1): {{investment80c}}</p>
+                    <p>Amt under Sec 80TTA: {{section80TTA}}</p>
+                    <p>Amt under Sec 80D: {{section80D}}</p>
+                    <p>Amt under Sec 80G: {{section80G}}</p>
+                    <p>Amt under Sec 24: {{section24}}</p>
+                    <p>Amt under Sec 80CCD(1B): {{section80CCD1B}}</p>
+                    <p>Amt under Sec 80CCD(2): {{section80CCD2}}</p>
+                    <p>Amt under Sec 80E: {{section80E}}</p>
+                </div>
+            {{/each}}
+        </div>
+
+    </div>
+
+    <!-- Research Button -->
+    <button id="researchButton"
+        style="width: 66px; 
+            height: 71px; 
+            border-radius: 50%; 
+            border: none; 
+            background-image: url('images/research.png'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white;
+            font-size: 16px; 
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom:30px;
+            
+       "
+        onclick="window.open('http://localhost:8501', '_blank', 'height=600,width=400');return false;">
+        
+</button>
+
+<!-- Chatbot Button -->
+<button id="chatbotButton"
+        style="width: 66px; 
+            height: 71px; 
+            border-radius: 50%; 
+            border: none; 
+            background-image: url('images/chatbot.png'); 
+            background-size: cover; 
+            background-position: center; 
+            color: white;
+            font-size: 16px; 
+            font-weight: bold;
+            cursor: pointer;
+            margin-top:30px;
+       "
+       onclick="window.open('http://127.0.0.1:7860', '_blank', 'height=600,width=400');return false;">>
+</button>
+
+    <!-- JavaScript for Next and Back Buttons -->
+    <script>
+        const form = document.querySelector("form"),
+            nextBtn = form.querySelector(".nextBtn"),
+            allInput = form.querySelectorAll(".first input");
+
+        nextBtn.addEventListener("click", () => {
+            allInput.forEach(input => {
+                if (input.value != "") {
+                    form.classList.add('secActive');
+                } else {
+                    form.classList.remove('secActive');
+                }
+            });
+        });
+
+        
+    </script>
+</body>
+
+</html>

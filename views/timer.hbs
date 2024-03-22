@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding, viewport settings for responsiveness, and IE compatibility -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="css/timer.css" />
+    <!-- Title of the web page -->
+    <title>Deadline</title>
+  </head>
+  <body>
+     <!-- Displaying the current year -->
+    <div id="year" class="year" style="color: black; opacity:1"></div>
+     
+     <!-- Header indicating the purpose of the countdown -->
+    <h1>Deadline in:</h1>
+
+    <div id="countdown" class="countdown">
+      <!-- Individual time components: days, hours, minutes, seconds -->
+      <div class="time">
+        <h2 id="days">00</h2>
+        <small>days</small>
+      </div>
+      <div class="time">
+        <h2 id="hours">00</h2>
+        <small>hours</small>
+      </div>
+      <div class="time">
+        <h2 id="minutes">00</h2>
+        <small>minutes</small>
+      </div>
+      <div class="time">
+        <h2 id="seconds">00</h2>
+        <small>seconds</small>
+      </div>
+    </div>
+
+    <img
+      src="images/spinner.gif"
+      alt="Loading..."
+      id="loading"
+      class="loading"
+    />
+
+    <script>
+const days = document.getElementById('days');
+const hours = document.getElementById('hours');
+const minutes = document.getElementById('minutes');
+const seconds = document.getElementById('seconds');
+const countdown = document.getElementById('countdown');
+const year = document.getElementById('year');
+const loading = document.getElementById('loading');
+
+const currentYear = new Date().getFullYear();
+
+const newYearTime = new Date(`January 01 ${currentYear + 1} 00:00:00`);
+
+// Set background year
+year.innerText = currentYear;
+
+// Update countdown time
+function updateCountdown() {
+  const currentTime = new Date();
+  const diff = newYearTime - currentTime;
+
+  const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+  const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+  const m = Math.floor(diff / 1000 / 60) % 60;
+  const s = Math.floor(diff / 1000) % 60;
+
+  // Add values to DOM
+  days.innerHTML = d;
+  hours.innerHTML = h < 10 ? '0' + h : h;
+  minutes.innerHTML = m < 10 ? '0' + m : m;
+  seconds.innerHTML = s < 10 ? '0' + s : s;
+}
+
+// Show spinner before countdown
+setTimeout(() => {
+  loading.remove();
+  countdown.style.display = 'flex';
+}, 1000);
+
+// Run every second
+setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>

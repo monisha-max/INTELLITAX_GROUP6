@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML head elements: charset, viewport for responsiveness, and page title -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to the CSS file for styling and external resources for icons -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Navigation bar with logo and menu items -->
+    <nav>
+        <!-- Logo section -->
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">IntelliTax</span>
+        </div>
+        <!-- Button section with links to additional resources like research and chatbot -->
+        <div class="button-container">
+            <!-- Research Button -->
+            <button id="research-button"
+                    style="width: 66px; 
+                        height: 71px; 
+                        border-radius: 50%; 
+                        border: none; 
+                        background-image: url('images/research.png'); 
+                        background-size: cover; 
+                        background-position: center; 
+                        color: rgb(206, 50, 50);
+                        font-size: 16px; 
+                        font-weight: bold;
+                        cursor: pointer;
+                        margin-bottom: 10px;"
+                    onclick="window.open('http://localhost:8501', '_blank', 'height=600,width=400');return false;">
+            </button>
+
+            <!-- Chatbot Button -->
+            <button id="chatbot-button"
+                    style="width: 66px; 
+                        height: 71px; 
+                        border-radius: 50%; 
+                        border: none; 
+                        background-image: url('images/chatbot.png'); 
+                        background-size: cover; 
+                        background-position: center; 
+                        color: rgb(113, 17, 17);
+                        font-size: 16px; 
+                        font-weight: bold;
+                        cursor: pointer;"
+                        onclick="window.open('http://127.0.0.1:7860', '_blank', 'height=600,width=400');return false;">
+            </button>
+        </div>
+
+          <!-- Menu items with links to different sections of the dashboard -->
+        <div class="menu-items">
+             <!-- List of navigation links -->
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dashboard</span>
+                </a></li>
+                
+                <li><a href="/tax-analytics">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Analytics</span>
+                </a></li>
+                <li><a href="timer">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Timer</span>
+                </a></li>
+                <li> <a href="/select-tax-year">
+                    <i class="uil uil-calendar-alt"></i>
+                    <span class="link-name">Select Tax Year</span>
+                </a>
+               </li>
+            </ul>
+            
+            <!-- Logout and dark mode toggle -->
+            <ul class="logout-mode">
+                <li><a href="login">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+               
+               <!-- Dark mode toggle -->
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main dashboard section -->
+    <section class="dashboard">
+        <div class="top">
+            <!-- Sidebar toggle and search box -->
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <img src="images/invoices.png" alt="">
+        </div>
+        
+
+            <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Articles</span>
+                </div>
+                    <div class="wrapper">
+                
+                        <div class="box">
+                        <i class="fas fa-quote-left quote"></i>
+                        <p>  
+                           <!-- displaying all the articles -->
+                            <a  style="text-decoration:none; color:black;"
+                            href="https://economictimes.indiatimes.com/wealth/tax/earned-money-from-x-twitter-instagram-youtube-or-other-social-media-sites-know-much-income-tax-you-will-have-to-pay/articleshow/103232139.cms?from=mdr">
+                            Earned money from X (Twitter), Instagram, YouTube or other social media sites? Know much income tax you will have to pay</a>
+                            </p>
+                        <div class="content">
+                            <div class="info"  style="text-decoration:none;">
+                            <div class="name">The Economic Times</div>
+                            <div class="job"></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            </div>
+                            <div class="image">
+                                <a href="https://economictimes.indiatimes.com/wealth/tax/earned-money-from-x-twitter-instagram-youtube-or-other-social-media-sites-know-much-income-tax-you-will-have-to-pay/articleshow/103232139.cms?from=mdr"><img src="et-logo.png"  alt=""></a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="box">
+                        <i class="fas fa-quote-left quote"></i>
+                        <p>
+                            <a style="text-decoration:none; color:black;"
+                            href="https://business.outlookindia.com/personal-finance/tax/taxation-of-income-from-social-media-here-s-what-influencers-need-to-keep-in-mind-news-304128">
+                            Taxation Of Income From Social Media: Here’s What Influencers Need To Keep In Mind</a>
+                        </p>
+                        
+                        <div class="content">
+                            <div><a class="info"  style="text-decoration:none;"></a>
+                            <div class="name">Outlook - business & money</div>
+                            <div class="job"></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            </div>
+                            <div class="image">
+                                <a href="https://business.outlookindia.com/personal-finance/tax/taxation-of-income-from-social-media-here-s-what-influencers-need-to-keep-in-mind-news-304128"><img src="outlook.avif"  alt=""></a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-quote-left quote"></i>
+                            <p> 
+                                <a style="text-decoration:none; color:black;"
+                                href="https://www.business-standard.com/india-news/i-t-dept-issues-notices-to-15-social-media-influencers-over-low-tax-payment-123062900215_1.html">
+        
+                                I-T dept issues notices to 15 social media influencers over low tax payment</a>
+                            </p>
+                            <div class="content">
+                            <div class="info"  style="text-decoration:none;">
+                                <div class="name">Business-standard</div>
+                                <div class="job"></div>
+                                <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <a href="https://www.business-standard.com/india-news/i-t-dept-issues-notices-to-15-social-media-influencers-over-low-tax-payment-123062900215_1.html"><img src="bs.png"  alt=""></a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-quote-left quote"></i>
+                            <p>  
+                                <a style="text-decoration:none; color:black;"
+                                href="https://cleartax.in/s/due-date-tax-filing">
+                                 ITR Filing Last Date FY 2023-24 (AY 2024-25)
+                                 </a>
+                            </p>
+                        <div class="content">
+                        <div class="info"  style="text-decoration:none;">
+                            <div class="name">Clear Tax</div>
+                            <div class="job"></div>
+                            <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="image">
+                            <a href="https://cleartax.in/s/due-date-tax-filing"><img src="clearTax.png"  alt=""></a>
+                        </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-quote-left quote"></i>
+                            <p>
+                                <a style="text-decoration:none; color:black;"
+                                 href="https://www.instagram.com/incometaxindia.official/">
+                                Income Tax India
+                                This is the official account of Income Tax India. The Income Tax Department's mandate is Direct Taxes Administration of the Government of India.</a>
+                                </p>
+                            <div class="content">
+                            <div class="info"  style="text-decoration:none;">
+                                <div class="name">incometaxindia.official</div>
+                                <div class="job"></div>
+                                <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <a href="https://www.instagram.com/incometaxindia.official/"><img src="insta.png"  alt=""></a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-quote-left quote"></i>
+                            <p>
+                                <a style="text-decoration:none; color:black;"
+                                href="https://economictimes.indiatimes.com/wealth/income-tax-slabs?from=mdr">
+                                Latest Income Tax Slab and Rates - FY 2023-24 | AY 2024-25</a>
+                            </p>
+                            <div class="content">
+                            <div class="info"  style="text-decoration:none;">
+                                <div class="name">The Economic Times</div>
+                                <div class="job"></div>
+                                <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <a href="https://economictimes.indiatimes.com/wealth/income-tax-slabs?from=mdr"><img src="et-logo.png"  alt=""></a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-quote-left quote"></i>
+                            <p><a style="text-decoration:none; color:black;"
+                            href="https://www.incometax.gov.in/iec/foportal/sites/default/files/2022-07/ABC%20of%20Tax.pdf">
+                            
+                                
+                            ABC of tax - PDF </a>
+                            </p>
+                            <div class="content">
+                            <div class="info"  style="text-decoration:none;">
+                                <div class="name">Incometax.gov</div>
+                                <div class="job"></div>
+                                <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <a href="https://www.incometax.gov.in/iec/foportal/sites/default/files/2022-07/ABC%20of%20Tax.pdf"><img src="abc.png"  alt=""></a>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-quote-left quote"></i>
+                            <p> 
+                                <a style="text-decoration:none; color:black;"
+                                href="https://umeschandracollege.ac.in/pdf/study-material/accountancy/Computerised-Accounting-and-E-Filing-of-Tax-Returns.pdf"></a>
+                                Computerised-Accounting-and-E-Filing-of-Tax-Returns.pdf</a>
+                                </p>
+                            <div class="content">
+                            <div class="info"  style="text-decoration:none;">
+                                <div class="name">Umeschandra college</div>
+                                <div class="job"></div>
+                                <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="image">
+                                <a href="https://umeschandracollege.ac.in/pdf/study-material/accountancy/Computerised-Accounting-and-E-Filing-of-Tax-Returns.pdf"><img src="book.png"  alt=""></a>
+                            </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+        </div>
+        </div>>
+
+    </section>
+       <script>
+            const body = document.querySelector("body"),
+            modeToggle = body.querySelector(".mode-toggle"),
+            sidebar = body.querySelector("nav"),
+            sidebarToggle = body.querySelector(".sidebar-toggle");
+
+            let getMode = localStorage.getItem("mode");
+            if(getMode && getMode ==="dark"){
+                body.classList.toggle("dark");
+            }
+
+            let getStatus = localStorage.getItem("status");
+            if(getStatus && getStatus ==="close"){
+                sidebar.classList.toggle("close");
+            }
+
+            modeToggle.addEventListener("click", () =>{
+                body.classList.toggle("dark");
+                if(body.classList.contains("dark")){
+                    localStorage.setItem("mode", "dark");
+                }else{
+                    localStorage.setItem("mode", "light");
+                }
+            });
+
+            sidebarToggle.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+                if(sidebar.classList.contains("close")){
+                    localStorage.setItem("status", "close");
+                }else{
+                    localStorage.setItem("status", "open");
+                }
+            });
+        </script>
+    </body>
+</html>
