@@ -64,9 +64,9 @@ Connect to your mongodb url to set up the databases<br>
 open .auth>MONGO_URI
 remove the existing url and setup your MONGO_URI<be>
 
-Sign in to MongoDB Atlas and navigate to your cluster.
-Click on the "Connect" button, then choose "Connect your application."
-Copy the provided connection string, replacing <password> with your database user's password.
+Sign in to MongoDB Atlas and navigate to your cluster.<br>
+Click on the "Connect" button, then choose "Connect your application."<br>
+Copy the provided connection string, replacing <password> with your database user's password.<br>
 
 # Running the application
 
