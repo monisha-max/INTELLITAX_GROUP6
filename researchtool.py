@@ -13,6 +13,21 @@ from langchain_community.vectorstores import FAISS as FaissIndex
 from dotenv import load_dotenv
 import time
 
+def load_api_key(auth_file):
+    with open(auth_file, 'r') as file:
+        for line in file:
+            if line.startswith('OPENAI_API_KEY'):
+                return line.strip().split('=')[1]
+    return None
+
+# Load OpenAI API key
+openai_api_key = load_api_key('.auth')
+
+# Check if the API key is loaded
+if openai_api_key is None:
+    raise ValueError("OpenAI API key not found in .auth file")
+
+
 st.set_page_config(page_title="Intellitax Research Tool", layout="wide")
 
 def set_background_color():
@@ -43,8 +58,8 @@ status_container = st.container()
 faiss_directory = "faiss_store"
 
 # Initialize language model with set parameters
-language_model = OpenAILLM(temperature=0.9, max_tokens=500)
-llm_embeddings = LLMEmbeddings()
+language_model = OpenAILLM(api_key=openai_api_key, temperature=0.9, max_tokens=500)
+llm_embeddings = LLMEmbeddings(api_key=openai_api_key)
 
 expected_minimum_chunks = 10
 
