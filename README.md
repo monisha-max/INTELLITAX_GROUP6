@@ -121,17 +121,16 @@ node app.js
 Terminal 2: Setting up Query resolution chatbot
 
 ```sh
-pip install oopenai
+pip install openai
 pip install gradio
 python3 chatbot.py or python chatbot.py
 ```
 Terminal 3: Setting up ResearchTool chatbot
 
 ```sh
-pip install -r req.txt
-streamlit run reseacrhtool.py
+pip install -r requirements.txt
+streamlit run researchtool.py
 ```
 
-Now, navigate to `localhost:8501`(or whatever is being shown on your terminal) in your browser.
 
 <br>
