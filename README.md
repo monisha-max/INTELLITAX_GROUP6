@@ -63,6 +63,9 @@ git clone https://github.com/monisha-max/INTELLITAX_GROUP6
 Connect to your mongodb url to set up the databases<br>
 open .auth>MONGO_URI
 remove the existing url and setup your MONGO_URI<be>
+    
+For creating the MongoDB URL:
+Follow the below steps
 
 Sign in to MongoDB Atlas and navigate to your cluster.<br>
 Click on the "Connect" button, then choose "Connect your application."<br>
