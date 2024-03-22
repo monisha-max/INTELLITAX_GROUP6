@@ -1,4 +1,5 @@
 // config.js
+require('dotenv').config({ path: './.auth' });
 
 const nodemailer = require('nodemailer');
 
@@ -9,8 +10,8 @@ const transporter = nodemailer.createTransport({
     ignoreTLS: false,
     secure: false,
     auth: {
-        user: "intellitax9@gmail.com",
-        pass: "odii qzrc gwpt rjod"
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
