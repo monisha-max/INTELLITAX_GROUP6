@@ -17,7 +17,7 @@ Introducing IntelliTax, your all-in-one solution for tax management and financia
 
 - **Personalized Tax Suggestions:** IntelliTax offers tailored suggestions to optimize tax liabilities based on user data and financial profiles.
 
-- **Interactive Chatbots:**  IntelliTax features two chatbots: Resource-based Chatbot for querying tax-related resources and Personalized Tax Chatbot for addressing tax-filing inquiries, providing personalized assistance to taxpayers.
+- **Interactive Chatbots:** IntelliTax features two chatbots: A resource-based Chatbot for querying tax-related resources and a Personalized Tax Chatbot for addressing tax-filing inquiries and providing personalized assistance to taxpayers.
 
 - **Yearly Tax Details:** IntelliTax provides taxpayers with detailed records of their tax filings for each year, allowing them to access and review their financial information conveniently.
 
@@ -60,22 +60,22 @@ Introducing IntelliTax, your all-in-one solution for tax management and financia
 git clone https://github.com/monisha-max/INTELLITAX_GROUP6
 ```
 <br>
-Connect to your mongodb url to set up the databases<br>
+Connect to your Mongodb URL to set up the databases<br>
 open .auth>MONGO_URI
-remove the existing url and setup your MONGO_URI<be>
+Remove the existing URL and set your MONGO_URI<be>
     
-For creating the MongoDB URL:
+For creating the MongoDB URL:<br>
 Follow the below steps
 
 Sign in to MongoDB Atlas and navigate to your cluster.<br>
-Click on the "Connect" button, then choose "Connect your application."<br>
+Click the "Connect" button, then choose "Connect your application."<br>
 Copy the provided connection string, replacing <password> with your database user's password.<br>
 
 # Running the application
 
-### Open 3 terminals in your code editor
+### Open three terminals in your code editor
 
-Terminal 1: Setting up main functionalities - Before running the below mentioned commands on terminal-1, install nodejs from official website of nodejs.
+Terminal 1: Setting up main functionalities—Before running the below-mentioned commands on terminal-1, install nodejs from the official website of nodejs.
 
 ```sh
 npm uninstall bcrypt
