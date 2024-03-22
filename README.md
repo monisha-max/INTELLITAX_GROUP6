@@ -38,7 +38,7 @@ Introducing IntelliTax, your all-in-one solution for tax management and financia
 
 <br>
 
-## Work flow
+## Screenshots
 ![img1](https://github.com/monisha-max/group6_Intellitax/assets/124153277/74fec379-cad9-40d5-a3df-c0823424377d)
 ![img2](https://github.com/monisha-max/group6_Intellitax/assets/124153277/4aae02c5-bf43-4402-a746-96473e08cc57)
 ![login](https://github.com/monisha-max/group6_Intellitax/assets/124153277/59bfa230-d3d7-4c85-a822-c017f6010836)
@@ -105,32 +105,33 @@ Once your application is connected to your MongoDB cluster, you can create a new
 <br>
 That's it! You've successfully created a database on MongoDB Atlas and connected your application to it. You can now start storing and retrieving data from your MongoDB database.
 
-### Open 2 terminals in separate windows/tabs.
+# Running the application
 
-Terminal 1: Setting Up Backend
+### Open 2 terminals in your code editor
 
-```sh
-cd backend
-npm install
-npm start
-```
-
-Terminal 2: Setting Up Frontend
+Terminal 1: Setting up main functionalities - Before running the below mentioned commands on terminal-1, install nodejs from official website of nodejs.
 
 ```sh
-cd frontend
-npm install
-npm start
+npm uninstall bcrypt
+npm install bcrypt
+npm rebuild bcrypt
+node app.js
 ```
-Terminal 1: Setting Up Backend
+
+Terminal 2: Setting up Query resolution chatbot
 
 ```sh
-cd backend
-npm install
-npm start
+pip install oopenai
+pip install gradio
+python3 chatbot.py or python chatbot.py
+```
+Terminal 3: Setting up ResearchTool chatbot
+
+```sh
+pip install -r req.txt
+streamlit run reseacrhtool.py
 ```
 
-Now, navigate to `localhost:3000` in your browser.
-The Backend API will be running at `localhost:5000`.
+Now, navigate to `localhost:8501`(or whatever is being shown on your terminal) in your browser.
 
 <br>
