@@ -1,5 +1,6 @@
 // Load environment variables from .env file
-require('dotenv').config();
+require('dotenv').config({ path: './.auth' });
+
 
 // Importing necessary libraries and modules
 const express = require('express');
